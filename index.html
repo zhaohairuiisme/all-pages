@@ -1,157 +1,129 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <link rel="icon" href="ai.webp" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>zhaohairuiisme | AI与个人博客的融合</title>
-  <!-- 引入Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- 引入Font Awesome -->
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <!-- 引入Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
-  <!-- 引入Google字体 -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind配置 -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#165DFF',
-            secondary: '#722ED1',
-            accent: '#FF7D00',
-            dark: '#1D2129',
-            light: '#F2F3F5'
-          },
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-          },
-        },
-      }
-    }
-  </script>
-  
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-      .text-shadow {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      .text-gradient {
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-      }
-    }
-  </style>
+    <link rel="icon" href="ai.webp" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhaohairuiisme | AI与个人博客的融合</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="3.4.16.js"></script>
+    <!-- 引入Font Awesome -->
+    <link href="font-awesome.min.css" rel="stylesheet">
+    <!-- 引入Chart.js -->
+    <script src="chart.umd.min.js"></script>
+    <!-- 引入Google字体 -->
+    <link href="css2.css" rel="stylesheet">
+
+    <!-- Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#722ED1',
+                        accent: '#FF7D00',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
 </head>
 
 <body class="font-inter bg-light text-dark antialiased">
-  <script>
+<script>
     if (/Mobile|Android|iPhone/i.test(navigator.userAgent)) {
-      window.location.href = "https://zhaohairuiisme.github.io/Mobile-error/";
-}   else {
-     
-     
+        window.location.href = "https://zhaohairuiisme.github.io/Mobile-error/";
+    }   else {
+
+
     }
 
-
-
-  </script>
-  <!-- 导航栏 -->
-  <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+</script>
+<!-- 导航栏 -->
+<header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center bg-white/80 backdrop-blur-md shadow-sm">
-      <a href="#" class="flex items-center space-x-2">
-        <span class="text-primary text-2xl"><i class="fa fa-bolt"></i></span>
-        <span class="font-bold text-xl text-primary">zhaohairuiisme</span>
-      </a>
-      
-      <!-- 桌面导航 -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="#home" class="font-medium hover:text-primary transition-colors">首页</a>
-        <a href="#articles" class="font-medium hover:text-primary transition-colors">文章</a>
-        <a href="#projects" class="font-medium hover:text-primary transition-colors">项目</a>
-        <a href="#ai-tools" class="font-medium hover:text-primary transition-colors">AI工具</a>
-        <a href="#about" class="font-medium hover:text-primary transition-colors">关于我</a>
-      </nav>
-      
-      <!-- 移动端菜单按钮 -->
-      <button id="menuBtn" class="md:hidden text-dark focus:outline-none">
-        <i class="fa fa-bars text-xl"></i>
-      </button>
+        <a href="#" class="flex items-center space-x-2">
+            <span class="text-primary text-2xl"><i class="fa fa-bolt"></i></span>
+            <span class="font-bold text-xl text-primary">zhaohairuiisme</span>
+        </a>
+
+        <!-- 桌面导航 -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="font-medium hover:text-primary transition-colors">首页</a>
+            <a href="#articles" class="font-medium hover:text-primary transition-colors">文章</a>
+            <a href="#projects" class="font-medium hover:text-primary transition-colors">项目</a>
+            <a href="#ai-tools" class="font-medium hover:text-primary transition-colors">AI工具</a>
+            <a href="#about" class="font-medium hover:text-primary transition-colors">关于我</a>
+        </nav>
+
+        <!-- 移动端菜单按钮 -->
+        <button id="menuBtn" class="md:hidden text-dark focus:outline-none">
+            <i class="fa fa-bars text-xl"></i>
+        </button>
     </div>
-    
+
     <!-- 移动端导航菜单 -->
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
-      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-        <a href="#home" class="font-medium py-2 hover:text-primary transition-colors">首页</a>
-        <a href="#articles" class="font-medium py-2 hover:text-primary transition-colors">文章</a>
-        <a href="#projects" class="font-medium py-2 hover:text-primary transition-colors">项目</a>
-        <a href="#ai-tools" class="font-medium py-2 hover:text-primary transition-colors">AI工具</a>
-        <a href="#about" class="font-medium py-2 hover:text-primary transition-colors">关于我</a>
-      </div>
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+            <a href="#home" class="font-medium py-2 hover:text-primary transition-colors">首页</a>
+            <a href="#articles" class="font-medium py-2 hover:text-primary transition-colors">文章</a>
+            <a href="#projects" class="font-medium py-2 hover:text-primary transition-colors">项目</a>
+            <a href="#ai-tools" class="font-medium py-2 hover:text-primary transition-colors">AI工具</a>
+            <a href="#about" class="font-medium py-2 hover:text-primary transition-colors">关于我</a>
+        </div>
     </div>
-  </header>
+</header>
 
-  <!-- 英雄区域 -->
-  <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-primary/5 to-secondary/5">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row items-center">
+<!-- 英雄区域 -->
+<div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6">
-            探索 <span class="bg-gradient-to-r from-primary to-secondary text-gradient">AI</span> 与
-            <br>技术的无限可能
-          </h1>
-        <div class="md:w-1/2 relative">
-          <div class="relative w-full max-w-md mx-auto">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30"></div>
-            <img src="https://picsum.photos/seed/ai-dev/600/600" alt="AI与开发者" class="relative rounded-full w-full h-auto shadow-xl">
-            <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg animate-pulse">
-              <div class="flex items-center space-x-2">
-                <span class="text-accent text-2xl"><i class="fa fa-code"></i></span>
-                <div>
-                  <p class="text-sm font-medium">AI驱动的</p>
-                  <p class="text-xs text-gray-500">创意与开发</p>
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6">
+                探索 <span class="bg-gradient-to-r from-primary to-secondary text-gradient">AI</span> 与
+                <br>技术的无限可能
+            </h1>
+            <div class="md:w-1/2 relative">
+                <div class="relative w-full max-w-md mx-auto">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30"></div>
+                    <img src="https://picsum.photos/seed/ai-dev/600/600" alt="AI与开发者" class="relative rounded-full w-full h-auto shadow-xl">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg animate-pulse">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-accent text-2xl"><i class="fa fa-code"></i></span>
+                            <div>
+                                <p class="text-sm font-medium">AI驱动的</p>
+                                <p class="text-xs text-gray-500">创意与开发</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-
-  <!-- 统计数据 -->
-  <section class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-6 rounded-xl bg-light">
-          <h3 class="text-3xl font-bold text-primary mb-2">24+</h3>
-          <p class="text-gray-600">技术文章</p>
-        </div>
-        <div class="p-6 rounded-xl bg-light">
-          <h3 class="text-3xl font-bold text-primary mb-2">16</h3>
-          <p class="text-gray-600">开源项目</p>
-        </div>
-        <div class="p-6 rounded-xl bg-light">
-          <h3 class="text-3xl font-bold text-primary mb-2">5K+</h3>
-          <p class="text-gray-600">月度访问量</p>
-        </div>
-        <div class="p-6 rounded-xl bg-light">
-          <h3 class="text-3xl font-bold text-primary mb-2">3</h3>
-          <p class="text-gray-600">AI工具</p>
-        </div>
-      </div>
-    </div>
-  </section>
